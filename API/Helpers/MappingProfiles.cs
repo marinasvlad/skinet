@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using API.Dtos;
 using AutoMapper;
 using Core.Entities;
+using Core.Entities.Identity;
 
 namespace API.Helpers
 {
@@ -17,6 +18,7 @@ namespace API.Helpers
                                                     .ForMember(d => d.PictureUrl, o => o.MapFrom<ProductUrlResolver>());
 
             
+            CreateMap<Address, AddressDto>();
         }
     }
 }
